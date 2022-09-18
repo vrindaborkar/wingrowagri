@@ -1,8 +1,8 @@
 .section {
     width: 100%;
     height: 7vh;
-    /* margin-top: 2rem; */
-    /* display: grid; */
+    /* margin-top: 2rem;
+    display: grid; */
     grid-template-columns: repeat(10, 1fr);
     text-align: center;
 }
@@ -16,9 +16,9 @@
     font-size: small;
     text-align: center;
 
-    /* text-align: center; */
-    /* flex: 1; */
-    /* margin: 10%; */
+    /* text-align: center;
+    flex: 1;
+    margin: 10%; */
 }
 .section > div:hover {
     cursor: pointer;
@@ -27,16 +27,16 @@
 .disabled {
     display: table-cell;
 
-    /* display: inline; */
-    /* content: inherit; */
+    /* display: inline;
+    content: inherit; */
     width: 40px;
     height: 40px;
     background-color:white;
     font-size: small;
     text-align: center;
 
-    /* text-overflow: ellipsis; */
-    /* border-radius: 2px; */
+    /* text-overflow: ellipsis;
+    border-radius: 2px; */
 }
 .booked {
     background-color: #19a0d9;

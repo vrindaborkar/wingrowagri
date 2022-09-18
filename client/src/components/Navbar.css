@@ -110,10 +110,10 @@
   }
   
   .nav-item a:hover::after {
-    /* text-shadow: 1px 1px 2rem grey; */
-    /* transform: scale(1.1); */
-    /* border-radius: 10px; */
-    /* transition: .1s ease;
+    /* text-shadow: 1px 1px 2rem grey;
+    transform: scale(1.1);
+    border-radius: 10px;
+    transition: .1s ease;
     color: green;
     border-bottom: solid 5px green; */
     width: 100%;

@@ -112,8 +112,8 @@
 /* .bookedseat {
   text-align: center;
   font-weight:lighter;
-  /* border: solid black rgb(149, 155, 149); */
-/* } */ */
+  border: solid black rgb(149, 155, 149);
+}  */
 .brow{
   /* width: 50%; */
   display: table-cell;
