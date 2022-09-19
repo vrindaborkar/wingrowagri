@@ -163,11 +163,11 @@ export default function FarmersHome() {
             Logout
           </button>
           <div className='buttons'>
-            <Link className='button' to={"../outward"}>
-                    Fill Outward Data
-                </Link>
             <Link className='button' to={"../inward"}>
-                  Fill Inward Data
+                    Fill Inward Data
+                </Link>
+            <Link className='button' to={"../outward"}>
+                  Fill Outward Data
             </Link>
           </div>
           
