@@ -67,7 +67,7 @@ const confirmBooking = async() => {
 
 const addSeat = async(ev) => {
   if(numberOfSeats && !ev.target.className.includes('disabled')) {
-      const seatsToBook = parseInt(numberOfSeats, 20);
+      const seatsToBook = parseInt(numberOfSeats, 32);
     if(bookedStalls.length <= seatsToBook) {
         if (bookedStalls.includes(ev.target.innerText)) {
             const newAvailable = bookedStalls.filter(seat => seat !== ev.target.innerText);
@@ -157,11 +157,51 @@ const initPayment = (data) =>
         <div className='stallcontainer'>
           <p>How Many Stalls Would You Like to Book?</p>
           <input className='seatsinput' value={numberOfSeats} onChange={(ev) => setNumberOfSeats(ev.target.value)}/>
-                {(Id!=="")?
-                <Seats values={Stalls}
-                availableSeats={availableStalls}
-                bookedSeats={bookedStalls}
-                addSeat={addSeat}/>:
+                {(Id!=="")
+                ?
+                // <Seats values={Stalls}
+                // availableSeats={availableStalls}
+                // bookedSeats={bookedStalls}
+                // addSeat={addSeat}/>
+                <div className='stallrows'>
+                  <div className='arow'>
+                  <Seats  values={["Advert-ising","Fruits","Tarkari","Snacks","Tarkari","Tarkari","Exotic","Tarkari","Tarkari","Onion- Potato","Tarkari","Tarkari","SHG","Tarkari","SHG","Leafy"]}
+                  availableSeats={[]}
+                  bookedSeats={[]}
+                  addSeat={addSeat}/>
+                  </div>
+                  <div className='midrow'>
+                  <Seats  values={["Flower- Kobi"]}
+                  availableSeats={[]}
+                  bookedSeats={[]}
+                  addSeat={addSeat}/>
+                  </div>
+                  <div className='midrow'>
+                  <Seats  values={["Tarkari"]}
+                  availableSeats={[]}
+                  bookedSeats={[]}
+                  addSeat={addSeat}/>
+                  </div>
+                  <div className='brow'>
+                  <Seats  values={["Advert-ising","Leafy","Tarkari","Tarkari","Masala", "Tarkari","Tarkari","Antioc","Tarkari","Tarkari","Dry- Fruits","Tarkari","SHG","Onion-Potatos","SHG","Fruits"]}
+                  availableSeats={[]}
+                  bookedSeats={[]}
+                  addSeat={addSeat}/>
+                  </div>
+                  <br></br>
+                  <div className='bookeda' >
+                    <div className='bookedseat'> Stalls</div>
+                    <h4>Booked</h4>
+                  </div>
+                  <div className='availa'>
+                    <div className='availseat'> Stalls</div>
+                    <h4>Available</h4>
+                  </div>
+
+                 
+                </div>
+                
+                :
                 <>
                 <br/>
                 <h3>Please select the market!</h3>

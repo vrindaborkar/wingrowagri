@@ -143,7 +143,7 @@
   }
 
   .grid_countinfo{
-    width: 7rem;
+    width: 9rem;
     height: 6rem;
     display: flex;
     flex-direction: column;
@@ -345,7 +345,7 @@
   }
 
     .info{
-      margin: 1rem;
+      /* margin: 1rem; */
       width: 100vw;
     }
     .info_scroll{

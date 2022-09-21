@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import "./Login.css";
 
 
 function Copyright(props) {
@@ -84,7 +85,7 @@ export default function Register() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 10,
+            marginTop: 0,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -92,12 +93,14 @@ export default function Register() {
             overflowX:"hidden"
           }}
         >
-          <Avatar sx={{ mt: 10, bgcolor: 'secondary.main' }}>
+          {/* <Avatar sx={{ mt: 10, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
+          </Avatar> */}
+          <img className="logo" src="../images/logo.jpg" alt="img" />
+
+          {/* <Typography component="h1" variant="h5">
            Register Here!!
-          </Typography>
+          </Typography> */}
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -162,7 +165,7 @@ export default function Register() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Confirm
+              Register
             </Button>
           </Box>
         </Box>

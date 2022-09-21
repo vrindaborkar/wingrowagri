@@ -12,6 +12,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
+import "./Login.css";
+
 
 
 function Copyright(props) {
@@ -88,12 +90,21 @@ const handleSubmit = async (event) => {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ mt: 10, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 2, border: 0,padding:"30px",boxShadow:5,backgroundColor:"FFFF99", opacity:0.9}}>
+
+          {/* <Avatar sx={{ mt: 10, bgcolor: 'secondary.main' }}> */}
+            {/* <LockOutlinedIcon /> */}
+
+          {/* </Avatar> */}
+          {/* <Typography component="h1" variant="h5">
+          </Typography> */}
+          <img className="logo" src="../images/logo.jpg" alt="img" />
+
+          <Box component="form"
+           textAlign='center'
+           onSubmit={handleSubmit}
+            noValidate 
+            sx={{ mt: 2, border: 0,padding:"30px",boxShadow:5,backgroundColor:"FFFF99", opacity:0.9}}>
+
             <TextField
               margin="normal"
               required
@@ -123,9 +134,10 @@ const handleSubmit = async (event) => {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            <br></br>
             <Button
               type="submit"
-              fullWidth
+              shortWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
@@ -134,10 +146,13 @@ const handleSubmit = async (event) => {
             <Grid container>
               <Grid item>
                 <Link to={"./register"}>
-                  <Button fullWidth
+                  <Button 
+                  fullWidth
                    variant="contained"
-                   sx={{ mt: 3, mb: 2}} 
-                   className='button'>
+                   sx={{ mt: 3,
+                     mb: 2, ml: 1 , mr: 5}} 
+                   className='button'
+                   >
                     Click here to Register
                   </Button>
                 </Link>
