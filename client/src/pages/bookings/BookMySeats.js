@@ -97,11 +97,15 @@ const BookMySeats = ({response}) => {
         <React.Fragment>
             <p>How Many Stalls Would You Like to Book?</p>
             <input value={numberOfSeats} onChange={(ev) => setNumberOfSeats(ev.target.value)}/>
-            <Seats values={normalSeats}
+
+            <div>
+              <br></br>
+            </div>
+            {/* <Seats values={normalSeats}
                    availableSeats={availableSeats}
                    bookedSeats={bookedSeats}
-                   addSeat={addSeat}/>
-              <div className='stallrows'>
+                   addSeat={addSeat}/> */}
+              {/* <div className='stallrows'>
                 <div className='arow'>
                   <Seats  values={["Advert-ising","Fruits","Tarkari","Snacks","Tarkari","Tarkari","Exotic","Tarkari","Tarkari","Onion- Potato","Tarkari","Tarkari","SHG","Tarkari","SHG","Leafy"]}
                   availableSeats={[]}
@@ -140,7 +144,7 @@ const BookMySeats = ({response}) => {
                 </div>
                 
 
-                   <button onClick={confirmBooking}>Book Stalls</button>
+                   <button onClick={confirmBooking}>Book Stalls</button> */}
             <p>{bookedStatus}</p>
         </React.Fragment>
 

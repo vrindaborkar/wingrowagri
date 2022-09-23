@@ -140,16 +140,16 @@
   }
   
   .sidebar {
-    width: 60vw;
+    width: 40vw;
     background: #1b1919;
-    height: 100vh;
+    height: 65vh;
     position: fixed;
     left: -100%;
     top: 0;
     transition: .4s all ease;
     z-index: 4;
-    padding-left: 1rem;
-    padding-top: 20vh;
+    padding-left: 0.4rem;
+    padding-top: 15vh;
   }
   
   .sidebar.active1 {

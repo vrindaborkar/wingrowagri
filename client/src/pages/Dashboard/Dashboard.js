@@ -143,8 +143,8 @@ function Dashboard() {
             <p className='p_secondary'>The Global Student Entrepreneur Awards (GSEA) for students operate a business while in university.</p>
           </div>
         </div>
-        <h1 className='heading_tertiary'>Supported By</h1>
-        <div className="awards">
+        {/* <h1 className='heading_tertiary'>Supported By</h1> */}
+        {/* <div className="awards">
           <div className="sub_awards">
             <img className="awards_img" src="https://nitrocdn.com/RqugehZVJHpJabrJmBzbnfVbCdjHnQyq/assets/static/optimized/rev-0d4ba04/wp-content/uploads/2020/04/unlimited-india_edit.png" alt="img" />
             <br/>
@@ -160,7 +160,7 @@ function Dashboard() {
             <br/>
             <h2>Entrepreneurs' Organization</h2>
           </div>
-        </div>
+        </div> */}
   </div>
   </div>
   );

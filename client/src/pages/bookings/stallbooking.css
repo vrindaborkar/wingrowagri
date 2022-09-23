@@ -1,17 +1,20 @@
 .main_stall{
     /* width: 100vw; */
-    height: 100vh;
+    /* height: 100vh; */
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 5rem;
+    background-color: white;
+
 }
 
 .stall_content{
     width: 70vw;
     height: 60vh;
-    border: 1px rgb(128, 214, 128) solid;
+    border: 1px rgb(125, 145, 125) solid;
     margin-top: .5rem;
     display: flex;
     justify-content: flex-start;
@@ -89,7 +92,7 @@
 .confirmbtn{
   width: 10rem;
   padding: .4rem;
-  margin: 1rem auto;
+  margin: 6rem auto;
   text-align: center;
   font-weight: bold;
   transition: all .2s ease;
@@ -104,8 +107,14 @@
 .seatsinput{
   width: 25%;
 }
+
+.stallrows{
+  width: 100%;
+  margin:0%;
+
+}
 .arow{
- margin: 90%;
+ margin: 0%;
  display: table-cell;
 
 }
@@ -119,6 +128,45 @@
   display: table-cell;
 }
 .midrow{
-  margin-left: 93.5%;
+  margin-left: 93.7%;
   
+}
+@media screen and (max-width: 700px) {
+  .arow{
+    margin: 50%;
+    display: table-cell;
+   
+   }
+   .brow{
+    /* width: 50%; */
+    display: table-cell;
+  }
+  .midrow{
+    margin-left: 93.5%;
+    
+  }
+  .disabled {
+    display: table-cell;
+
+    /* display: inline;
+    content: inherit; */
+    width: 40px;
+    height: 40px;
+    background-color:white;
+    font-size: small;
+    text-align: center;
+
+    /* text-overflow: ellipsis;
+    border-radius: 2px; */
+}
+.section > div {
+    border: 1px solid rgb(32, 160, 60);
+    /* background-color: white; */
+    border-radius: 10%;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    font-size: small;
+    text-align: center;
+}
 }
