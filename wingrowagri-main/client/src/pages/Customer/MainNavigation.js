@@ -1,0 +1,20 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import './customer_styles.css'
+
+const mainNavigation = props => (
+  <header className="main-navigation">
+    <nav>
+      <ul>
+        <li>
+          <NavLink to="/customers">Products</NavLink>
+        </li>
+        <li>
+          <NavLink to="/cart">Cart ({props.cartItemNumber})</NavLink>
+        </li>
+      </ul>
+    </nav>
+  </header>
+);
+
+export default mainNavigation;
