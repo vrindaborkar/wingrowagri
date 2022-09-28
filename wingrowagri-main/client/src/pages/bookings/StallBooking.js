@@ -1,6 +1,7 @@
 import React , {useState , useEffect} from 'react'
 import './stallbooking.css'
 import './Bookings.css'
+import classes from './BookMySeats.module.css';
 import Dropdown from './Dropdown'
 import Seats from './Seats'
 import Terms from './terms';
@@ -212,6 +213,7 @@ const initPayment = (data) =>
                   bookedSeats={[]}
                   addSeat={addSeat}/>
                   </div>
+                  <br></br>
                   <br></br>
                   <div className='bookeda' >
                     <div className='bookedseat'> Stalls</div>

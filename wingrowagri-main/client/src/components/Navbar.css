@@ -97,8 +97,7 @@
   }
   
   .nav-item a:after{
-      /* 
-      border-bottom: solid 5px green;  */
+      /* border-bottom: solid 5px green;  */
       color: green;
       content: " ";
       position: absolute;

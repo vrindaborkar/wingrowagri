@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 6rem;
     background-color: white;
 
 }
@@ -169,4 +169,5 @@
     font-size: small;
     text-align: center;
 }
+
 }
