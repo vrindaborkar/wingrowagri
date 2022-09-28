@@ -1,0 +1,209 @@
+.main_farmers_page{
+    /* background-image: url('../../../public/images/green_leaf_back.jpg'); */
+    background-position: stretch;
+    background-size: cover;
+}
+
+.farmers_main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100vw;
+    margin-top: 13vh;
+    flex-direction: column;
+}
+
+.farmers_info{
+    height: 10vh;
+    width: 80vw;
+    margin: 13vh auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_primary{
+    display: inline-block;
+    font-size: 2.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.farmers_data{
+    height: 100%;
+    width: 80vw;
+    margin: 1rem auto;
+    display: flex;
+    font-size: 1rem;
+}
+
+
+.inward_data{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+    border-right: 1px black solid;
+    overflow: auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+.outward_data{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.header_primary{
+    font: 1.3rem;
+    font-weight: 600;
+    align-self: center;
+}
+
+
+.logout_btn{
+    position: absolute;
+    top: 14vh;
+    right: 2vw;
+    padding: .5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    transition: all .1s ease;
+}
+
+.logout_btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.inward_details{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    padding: 1rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+}
+
+.outward_details{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    padding: 1rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+}
+.inward_info{
+    flex: 1;
+    width: 100%;
+}
+
+.outward_info{
+    flex: 1;
+    width: 100%;
+}
+
+
+.purchase_info{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    overflow: auto;
+}
+
+.sales_info{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    overflow: auto;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.button{
+    background-color:rgb(39, 129, 126);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: .8rem .8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    width:10rem;
+    border-radius: 10px 100px / 120px;;
+    cursor:pointer;
+    margin: 0rem 1rem;
+}
+
+.button:hover{
+    background-color: rgb(18, 73, 71);
+}
+
+
+@media screen and (max-width: 850px) {
+    .farmers_data{
+        flex-direction: column;
+        overflow: scroll;
+        width: 100%;
+        border: none;
+        justify-content: flex-start;
+        padding: 1rem;
+
+    }
+
+    .inward_data{
+        height: 30vh;
+        width: 100%;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px black solid;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .outward_data{
+        height: 30vh;
+        width: 100%;
+        border: none;
+        justify-content: center;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .button{
+        width:8rem;
+    }
+
+    .farmers_main{
+        margin-top: 5vh;
+    }
+
+    .farmers_info{
+        margin: 14vh auto 0 auto;
+    }
+}
+#commodity{
+    background-color: #ddd;
+}
