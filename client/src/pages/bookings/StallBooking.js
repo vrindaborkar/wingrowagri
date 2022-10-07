@@ -1,10 +1,9 @@
-import React , {useState , useEffect} from 'react'
+import React , {useState , useEffect } from 'react'
 import './stallbooking.css'
 import './Bookings.css'
 import Dropdown from './Dropdown'
 import Seats from './Seats'
 import axios from 'axios'
-import { NavLink } from 'react-router-dom'
 
 const StallBooking = () => {
 const [Id, setId] = useState("")
@@ -47,17 +46,18 @@ const fetchStalls = async () => {
 useEffect(() => {
   const temp = stallsdata.find(e=>e.location===Id)
     if(temp)
-    {setAvailableStalls(temp.availablestalls)
+    {
+    setAvailableStalls(temp.availablestalls)
     setStalls(temp.stalls)
     setLocation(temp.location)
-  }
+    }
 }, [stallsdata , Id])
 
 
 const confirmBooking = async() => {
   try {
     const orderUrl = "/orders";
-    const {data} = await axios.post(orderUrl,{amount:25000})
+    const {data} = await axios.post(orderUrl,{amount:100})
     initPayment(data.data)
   } catch (error) {
     console.log(error)
@@ -140,76 +140,80 @@ const initPayment = (data) =>
       rzp.open();
   } 
 
-
   const handleClick = (e) =>
   {
     setId(e.target.innerText)
     fetchStalls()
   }
 
+
   return (
     <div className='main_stall'>
-        {(stallsdata)?
+        {(Stalls && availableStalls && bookedStalls)?
         <>
         <div className="dropdown">
           <Dropdown Data={stallsdata} handleClick={handleClick}/>
         </div>
         <div className='stallcontainer'>
-          <p>How Many Stalls Would You Like to Book?</p>
+          <p className='seatsinput'>How Many Stalls Would You Like to Book?</p>
+          <br/>
           <input className='seatsinput' value={numberOfSeats} onChange={(ev) => setNumberOfSeats(ev.target.value)}/>
-                {(Id!=="")?
-                <Seats values={Stalls}
-                availableSeats={availableStalls}
-                bookedSeats={bookedStalls}
-                addSeat={addSeat}/>:
-                <>
                 <br/>
-                <h3>Please select the market!</h3>
-                <br></br>
+                {(Id!=="")?
+                <>
+                <h3 style={{overflow:"hidden" , margin:"auto"}}>Please select the market!</h3>
+                <br/>
+                <div className='row_control'>
                 <div className='stallrows'>
+
                   <div className='arow'>
-                  <Seats  values={["Advert-ising","Fruits","Tarkari","Snacks","Tarkari","Tarkari","Exotic","Tarkari","Tarkari","Onion- Potato","Tarkari","Tarkari","SHG","Tarkari","SHG","Leafy"]}
-                  availableSeats={[]}
-                  bookedSeats={[]}
+                  <Seats values={Stalls.slice(0,16)}
+                  availableSeats={availableStalls}
+                  bookedSeats={bookedStalls}
                   addSeat={addSeat}/>
-                  </div>
-                  <div className='midrow'>
-                  <Seats  values={["Flower- Kobi"]}
-                  availableSeats={[]}
-                  bookedSeats={[]}
-                  addSeat={addSeat}/>
-                  </div>
-                  <div className='midrow'>
-                  <Seats  values={["Tarkari"]}
-                  availableSeats={[]}
-                  bookedSeats={[]}
-                  addSeat={addSeat}/>
-                  </div>
-                  <div className='brow'>
-                  <Seats  values={["Advert-ising","Leafy","Tarkari","Tarkari","Masala", "Tarkari","Tarkari","Antioc","Tarkari","Tarkari","Dry- Fruits","Tarkari","SHG","Onion-Potatos","SHG","Fruits"]}
-                  availableSeats={[]}
-                  bookedSeats={[]}
-                  addSeat={addSeat}/>
-                  </div>
-                  <br></br>
-                  <div className='bookeda' >
-                    <div className='bookedseat'> Stalls</div>
-                    <h4>Booked</h4>
-                  </div>
-                  <div className='availa'>
-                    <div className='availseat'> Stalls</div>
-                    <h4>Available</h4>
                   </div>
 
-                 
+                  <div className='arow'>
+                  <Seats  values={Stalls.slice(16,32)}
+                  availableSeats={availableStalls}
+                  bookedSeats={bookedStalls}
+                  addSeat={addSeat}/>
+                  </div>
+
+                  <div className='arow'>
+                  <Seats values={Stalls.slice(32,48)}
+                  availableSeats={availableStalls}
+                  bookedSeats={bookedStalls}
+                  addSeat={addSeat}/>
+                  </div>
+
+                  <div className='arow'>
+                  <Seats  values={Stalls.slice(48)}
+                  availableSeats={availableStalls}
+                  bookedSeats={bookedStalls}
+                  addSeat={addSeat}/>
+                  </div>
+                  </div>
+
                 </div>
-                
 
-                </>}
-                <br></br>
-                <br></br>
+                <div className='btns_container'>
+                  <div className='bookeda' >
+                      <div className='bookedseat'> Stalls</div>
+                      <h4>Booked</h4>
+                    </div>
+                    <div className='availa'>
+                      <div className='availseat'> Stalls</div>
+                      <h4>Available</h4>
+                    </div>
+                    <div className='selectedseat'>
+                      <div className='selectseat'> Stalls</div>
+                      <h4>Selected</h4>
+                    </div>
+                </div>
                 <br></br>
                 <button className='confirmbtn' onClick={confirmBooking}>Book Stalls</button>
+                </>:<h2>Loading</h2>}
                 </div></>:<h2>Loading..</h2>}
     </div>
   )

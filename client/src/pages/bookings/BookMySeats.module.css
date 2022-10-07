@@ -1,51 +1,41 @@
 .section {
     width: 100%;
     height: 7vh;
-    /* margin-top: 2rem; */
     display: grid; 
     grid-template-columns: repeat(16, 7fr);
     text-align: center;
 }
 
 .section > div {
-    border: 1px solid rgb(149, 155, 151);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 10%;
     display: table-cell;
-    width: 40px;
+    width: 75px;
     height: 40px;
-    font-size: small;
-    text-align: center;
-
-    /* text-align: center;
-    flex: 1;
-    margin: 10%; */
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .section > div:hover {
     cursor: pointer;
 }
 
 .disabled {
-    display: table-cell;
-
-    /* display: inline;
-    content: inherit; */
-    width: 40px;
-    height: 40px;
-    background-color:rgb(186, 194, 184);
-    font-size: small;
-    text-align: center;
-
-    /* text-overflow: ellipsis;
-    border-radius: 2px; */
+    background-color:rgb(109, 113, 108);
+    cursor: not-allowed !important;
 }
+
 .booked {
-    border: 1px solid rgb(32, 160, 60);
     background-color: #a9ec92;
 }
 
-.section .disabled:hover {
-    cursor: not-allowed;
+.empty{
+    background-color:white;
+    cursor: not-allowed !important;
 }
+
 
 .input_field{
     margin-top: 1rem;

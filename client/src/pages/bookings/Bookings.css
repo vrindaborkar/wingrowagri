@@ -71,10 +71,14 @@
   }
 }
 .bookeda{
-  float: left;
-  margin-left: 37%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  flex-direction: column;
 }
+
+
 .bookedseat {
   /* border: 1px solid rgb(32, 160, 60); */
   /* background-color: rgb(172, 241, 163); */
@@ -90,10 +94,32 @@
   /* text-align: center; */
 }
 .availa{
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-
 }
+
+.selectedseat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.selectseat {
+  border: 1px solid rgb(149, 155, 151);
+  border-radius: 10%;
+  background-color: #a9ec92;
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  margin: 15px;
+}
+
 .availseat {
   border: 1px solid rgb(149, 155, 151);
   border-radius: 10%;
